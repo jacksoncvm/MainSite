@@ -36,7 +36,8 @@
 	private void Dispose() {
 		NavigationManager.LocationChanged -= LocationChanged;
 	}
-	protected override void OnInitialized() {   
-			((IJSInProcessRuntime)jsRuntime).InvokeVoid("loadTheme","");
+	protected override async Task OnAfterRenderAsync(bool firstRender) {   
+			await JsRuntime.InvokeVoidAsync("loadTheme","");
+    	await base.OnAfterRenderAsync(firstRender);
 	}
 }
