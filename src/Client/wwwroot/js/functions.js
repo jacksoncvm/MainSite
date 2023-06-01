@@ -22,3 +22,17 @@ function highlightCode(includeCopyBadge) {
     };
     window.highlightJsBadge(options);
 }
+function toggleTheme() {
+    var themeToggle = document.getElementById("theme-toggler");
+    document.body.classList.toggle("dark");
+    var theme = document.body.classList.contains("dark") ? "dark" : "light";
+    localStorage.setItem("theme", theme);
+}
+function loadTheme() {
+    var currentTheme = localStorage.getItem("theme");
+    if (currentTheme == "dark") {
+      document.body.classList.toggle("dark");
+    } else if (currentTheme == "light") {
+      document.body.classList.toggle("light");
+    }    
+}

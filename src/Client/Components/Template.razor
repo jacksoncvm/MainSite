@@ -2,7 +2,7 @@
 
 <CustomPageTitle Title="@(Name)" />
 <div class="width-all bg-yellow">
-	<div class="width-90 container">
+	<div class="container">
 		<div class="row no-gutters">
 			<div class="col component-title">@Name</div>
 		</div>
@@ -12,7 +12,7 @@
 	</div>
 </div>
 <div class="width-all yellow-slant">
-	<div class="width-90 container">
+	<div class="container">
 		<div class="row no-gutters">
 			@if (GettingStartedURL != null) {
 			<div class="col offset-@(DocsURL==null?"4":"2")">
@@ -30,7 +30,7 @@
 	</div>
 </div>
 <div class="width-all">
-	<div class="width-90 container">
+	<div class="container">
 		<div class="@((WhatIs != null || WhyUse != null ? "border-bottom-steeltoe-blue":"") + " row no-gutters")" style="@((WhatIs != null || WhyUse != null ? "margin-bottom:7%;padding-bottom:7%":""))">
 			@if (WhatIs != null) {
 			<div class="col-sm mr-sm-2">
@@ -94,7 +94,7 @@
 </div>
 @if(OtherArea != null) {
 	<div class="width-all">
-		<div class="width-90 container">
+		<div class="container">
 			<div class="row no-gutters">
 				@OtherArea
 			</div>

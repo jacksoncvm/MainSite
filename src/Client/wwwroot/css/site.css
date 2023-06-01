@@ -236,7 +236,7 @@ app {
 }
 
 .container {
-    padding: 0;
+    /*padding: 0;*/
 }
 
 .dropdown-item.active,
@@ -1065,4 +1065,206 @@ div[role=button] a.active,
 
 .blazored-sub-menu-header.open .blazored-sub-menu .blazored-sub-menu-header div[role=button] {
     font-weight: normal;
+}
+
+/*===================== THEME TOGGLE ===================== */
+
+#theme-toggler {
+    align-items: center;
+}
+
+#theme-toggler label {
+    width: 36px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 0;
+}
+
+#theme-toggler .bar {
+    position: absolute;
+    background: #d7e7e7;
+    height: 10px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#theme-toggler .icon {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: #41464b;
+    z-index: 1;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left .2s;
+}
+
+#theme-toggler svg {
+    height: 16px;
+    width: 16px;
+}
+
+#theme-toggler .sun {
+    color: white;
+}
+
+#theme-toggler .moon {
+    transform: translateX(2px);
+    display: none;
+}
+
+body.dark #theme-toggler .bar {
+    background-color: #41464b;
+}
+
+body.dark #theme-toggler .icon {
+    background-color: #fff;
+    color: #1b1f23;
+    left: 14px;
+}
+
+body.dark #theme-toggler .moon {
+    display: block;
+}
+
+body.dark #theme-toggler .sun {
+    display: none;
+}
+
+@media(max-width: 1199px) {
+    #theme-toggler {
+        display: none;
+    }
+}
+
+
+/*===================== DARK MODE ===================== */
+body.dark {
+    background: #001f3f;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark header {
+    box-shadow: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark .navbar-toggler {
+    background-color: white;
+}
+
+body.dark img#logo {
+    opacity: 0;
+}
+
+body.dark .navbar-brand {
+    background-image: url(../images/logo-white.svg);
+    background-size: 99%;
+    background-repeat: no-repeat;
+    background-position: top 9px left 1px;
+}
+
+body.dark #main {
+    padding-top: 60px;
+}
+
+body.dark .bg-white {
+    background-color: #001f3f !important;
+}
+
+body.dark .component-whatis-desc, 
+body.dark .component-whyuse-desc, 
+body.dark .tutorial .desc,
+body.dark .component-whatis-title, 
+body.dark .component-whyuse-title, 
+body.dark .tutorial .title,
+body.dark .stat .number,
+body.dark .component .desc,
+body.dark .component .title,
+body.dark .component-title, 
+body.dark .get-started-title, 
+body.dark .component-desc,
+body.dark .dropdown-item,
+body.dark .navbar-light .navbar-nav .nav-link, 
+body.dark .navbar-light .navbar-nav .show>.nav-link,
+body.dark a {
+    color: white;
+}
+
+body.dark a:hover {
+    color: rgba(255,255,255,0.8);
+}
+
+body.dark #main a,
+body.dark .special-link {
+    color: #ffd700;
+}
+
+body.dark #main a:hover,
+body.dark .special-link:hover {
+    color: white;
+}
+
+body.dark .dropdown-menu {
+    background-color: #001f3f;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+body.dark #main a.component-button,
+body.dark #main a.btn {
+    background-color: white;
+    color: #212529;
+}
+
+body.dark .bg-yellow,
+body.dark .bg-midnight-blue {
+    background-color: #001f3f;
+}
+
+body.dark .left-yellow-slant,
+body.dark .blue-slant,
+body.dark .yellow-slant {
+    background-image: none;
+}
+
+body.dark .btn.text-white {
+    color: #212529 !important;
+}
+
+body.dark .navbar-light .navbar-nav .nav-link.dropdown-item:focus, 
+body.dark .navbar-light .navbar-nav .nav-link.dropdown-item:hover,
+body.dark .navbar-light .navbar-nav .nav-link.dropdown-item:active,
+body.dark .navbar-light .navbar-nav .nav-link.dropdown-item.active,
+body.dark .component-button.nav-link {
+    color: #212529;
+}
+
+body.dark .home-icon {
+    filter: brightness(0) invert(1);
+}
+
+body.dark .banner {
+    border: 1px solid white;
+}
+
+body.dark #light-blue-slant {
+    display: none;
+}
+
+body.dark .border-steeltoe-blue {
+    border-color: white;
+}
+
+body.dark .component-feature,
+body.dark .border-bottom-steeltoe-blue {
+    border-bottom-color: white;
 }
